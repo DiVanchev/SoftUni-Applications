@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <title>Setup Legends</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- Navigation -->
+      <nav>
+        <div>
+          <a href="#">Setup Showcases</a>
+        </div>
+
+        <!-- Logged-in users -->
+        <div class="user">
+          <a href="#">Add Setup</a>
+          <a href="#">Logout</a>
+        </div>
+
+        <!-- Guest users -->
+        <div class="guest">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </div>
+      </nav>
+      <a id="logo" href="#"><img id="logo-img" src="./images/legend_logo.webp" alt="logo" /></a>
+    </header>
+
+    <main>
+      <!-- Home page -->
+
+      <section id="home">
+        <a href="#"><img id="home-img" src="./images/show.webp" alt="home-img" /></a>
+        <h1>
+          Welcome to Setup Legends, discover, share, and be inspired by epic gaming PC setups from around the world.
+          Whether you're showcasing your ultimate battlestation or seeking ideas to elevate your own, Setup Legends is
+          the hub where creativity meets performance. Join the community and let your setup shine!
+        </h1>
+      </section>
+
+      <!-- Dashboard page -->
+      <h2>Setup Showcase</h2>
+      <section id="setups">
+        <!-- Display a div with information about every post (if any)-->
+        <div class="setup">
+          <img src="./images/setup1.webp" alt="example1" />
+          <div class="setup-info">
+            <h3 class="setup-name">Violet Sanctum</h3>
+            <p class="description">
+              A sleek white canvas illuminated by vibrant purple, powered by ROG perfection.
+            </p>
+            <a class="details-btn" href="#">Details</a>
+          </div>
+        </div>
+        <div class="setup">
+          <img src="./images/setup2.webp" alt="example2" />
+          <div class="setup-info">
+            <h3 class="setup-name">Shadow Spectrum</h3>
+            <p class="description">
+              A bold black setup bursting with vivid RGB colors, with a burst of RGB brilliance.
+            </p>
+            <a class="details-btn" href="">Details</a>
+          </div>
+        </div>
+        <div class="setup">
+          <img src="./images/setup3.webp" alt="example3" />
+          <div class="setup-info">
+            <h3 class="setup-name">Darkblood Forge</h3>
+            <p class="description">
+              A dark and daring build ignited by crimson red, perfect for intense gaming.
+            </p>
+            <a class="details-btn" href="#">Details</a>
+          </div>
+        </div>
+      </section>
+      <!-- Display an h2 if there are no posts -->
+      <h2 id="no-setup">No Setups Added.</h2>
+
+      <!-- Register Page (Only for Guest users) -->
+      <section id="register">
+        <div class="form">
+          <img class="border" src="../images/banner.webp" alt="banner" />
+          <h2>Register</h2>
+          <form class="register-form">
+            <input type="text" name="email" id="register-email" placeholder="email" />
+            <input type="password" name="password" id="register-password" placeholder="password" />
+            <input type="password" name="re-password" id="repeat-password" placeholder="repeat password" />
+            <button type="submit">register</button>
+            <p class="message">Already registered? <a href="#">Login</a></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Login Page (Only for Guest users) -->
+      <section id="login">
+        <div class="form">
+          <img class="border" src="../images/banner.webp" alt="banner" />
+          <h2>Login</h2>
+          <form class="login-form">
+            <input type="text" name="email" id="email" placeholder="email" />
+            <input type="password" name="password" id="password" placeholder="password" />
+            <button type="submit">login</button>
+            <p class="message">
+              Not registered? <a href="#">Create an account</a>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Create Page (Only for logged-in users) -->
+      <section id="create">
+        <div class="form">
+          <img class="border" src="../images/banner.webp" alt="banner" />
+          <h2>Add Setup</h2>
+          <form class="create-form">
+            <input type="text" name="setup-name" id="setup-name" placeholder="Setup Name" />
+            <input type="text" name="image-url" id="image-url" placeholder="Image URL" />
+            <textarea id="description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
+            <textarea id="parts-used" name="parts-used" placeholder="Parts" rows="2" cols="10"></textarea>
+            <button type="submit">Add setup</button>
+          </form>
+        </div>
+      </section>
+      <!-- Edit Page (Only for logged-in users) -->
+      <section id="edit">
+        <div class="form">
+          <img class="border" src="../images/banner.webp" alt="banner" />
+          <h2>Edit Setup</h2>
+          <form class="edit-form">
+            <input type="text" name="setup-name" id="setup-name" placeholder="Setup Name" />
+            <input type="text" name="image-url" id="image-url" placeholder="Image URL" />
+            <textarea id="description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
+            <textarea id="parts-used" name="parts-used" placeholder="Parts" rows="2" cols="10"></textarea>
+            <button type="submit">Edit</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Details page -->
+      <section id="details">
+        <div id="details-wrapper">
+          <img id="details-img" src="./images/setup1.webp" alt="example1" />
+          <div>
+            <p id="details-setup-name">Violet Sanctum</p>
+            <div id="info-wrapper">
+              <div id="details-description">
+                <p id="setup-description">
+                  A sleek white canvas illuminated by vibrant purple, powered by ROG perfection.
+                </p>
+                <p id="details-parts">
+                  This build features an ASUS ROG Strix Z790-A motherboard paired with an Intel Core i7-13700K
+                  processor. The GPU is a powerful ASUS ROG Strix RTX 4070 Ti, complemented by 32GB Corsair Vengeance
+                  DDR5 RAM in white.Storage is handled by a 1TB Samsung 980 Pro NVMe SSD for lightning-fast speeds.
+                </p>
+              </div>
+            </div>
+            <h3>Setup Likes:<span id="like">0</span></h3>
+
+            <!--Edit and Delete are only for creator-->
+            <div id="action-buttons">
+              <a href="#" id="edit-btn">Edit</a>
+              <a href="#" id="delete-btn">Delete</a>
+
+              <!--Bonus - Only for logged-in users ( not authors )-->
+              <a href="#" id="like-btn">Like</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>Setup Legends</p>
+  </footer>
+</body>
+
+</html>
