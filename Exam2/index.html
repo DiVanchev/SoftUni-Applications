@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
   <link rel="stylesheet" href="./styles/styles.css" />
+  <script src="app.js"></script>
   <title>Setup Legends</title>
 </head>
 
@@ -26,8 +27,8 @@
 
         <!-- Guest users -->
         <div class="guest">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
+          <a href="src/views/login.js">Login</a>
+          <a href="src/views/register.js">Register</a>
         </div>
       </nav>
       <a id="logo" href="#"><img id="logo-img" src="./images/legend_logo.webp" alt="logo" /></a>
@@ -35,7 +36,6 @@
 
     <main>
       <!-- Home page -->
-
       <section id="home">
         <a href="#"><img id="home-img" src="./images/show.webp" alt="home-img" /></a>
         <h1>
@@ -49,7 +49,7 @@
       <h2>Setup Showcase</h2>
       <section id="setups">
         <!-- Display a div with information about every post (if any)-->
-        <div class="setup">
+        <div class="setup" id="setup-1">
           <img src="./images/setup1.webp" alt="example1" />
           <div class="setup-info">
             <h3 class="setup-name">Violet Sanctum</h3>
@@ -59,17 +59,17 @@
             <a class="details-btn" href="#">Details</a>
           </div>
         </div>
-        <div class="setup">
+        <div class="setup" id="setup-2">
           <img src="./images/setup2.webp" alt="example2" />
           <div class="setup-info">
             <h3 class="setup-name">Shadow Spectrum</h3>
             <p class="description">
               A bold black setup bursting with vivid RGB colors, with a burst of RGB brilliance.
             </p>
-            <a class="details-btn" href="">Details</a>
+            <a class="details-btn" href="#">Details</a>
           </div>
         </div>
-        <div class="setup">
+        <div class="setup" id="setup-3">
           <img src="./images/setup3.webp" alt="example3" />
           <div class="setup-info">
             <h3 class="setup-name">Darkblood Forge</h3>
@@ -120,10 +120,10 @@
           <img class="border" src="../images/banner.webp" alt="banner" />
           <h2>Add Setup</h2>
           <form class="create-form">
-            <input type="text" name="setup-name" id="setup-name" placeholder="Setup Name" />
-            <input type="text" name="image-url" id="image-url" placeholder="Image URL" />
-            <textarea id="description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
-            <textarea id="parts-used" name="parts-used" placeholder="Parts" rows="2" cols="10"></textarea>
+            <input type="text" name="setup-name" id="create-setup-name" placeholder="Setup Name" />
+            <input type="text" name="image-url" id="create-image-url" placeholder="Image URL" />
+            <textarea id="create-description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
+            <textarea id="create-parts-used" name="parts-used" placeholder="Parts" rows="2" cols="10"></textarea>
             <button type="submit">Add setup</button>
           </form>
         </div>
@@ -134,10 +134,10 @@
           <img class="border" src="../images/banner.webp" alt="banner" />
           <h2>Edit Setup</h2>
           <form class="edit-form">
-            <input type="text" name="setup-name" id="setup-name" placeholder="Setup Name" />
-            <input type="text" name="image-url" id="image-url" placeholder="Image URL" />
-            <textarea id="description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
-            <textarea id="parts-used" name="parts-used" placeholder="Parts" rows="2" cols="10"></textarea>
+            <input type="text" name="setup-name" id="edit-setup-name" placeholder="Setup Name" />
+            <input type="text" name="image-url" id="edit-image-url" placeholder="Image URL" />
+            <textarea id="edit-description" name="description" placeholder="Description" rows="2" cols="10"></textarea>
+            <textarea id="edit-parts-used" name="parts-used" placeholder="Parts" rows="2" cols="10"></textarea>
             <button type="submit">Edit</button>
           </form>
         </div>
@@ -157,18 +157,18 @@
                 <p id="details-parts">
                   This build features an ASUS ROG Strix Z790-A motherboard paired with an Intel Core i7-13700K
                   processor. The GPU is a powerful ASUS ROG Strix RTX 4070 Ti, complemented by 32GB Corsair Vengeance
-                  DDR5 RAM in white.Storage is handled by a 1TB Samsung 980 Pro NVMe SSD for lightning-fast speeds.
+                  DDR5 RAM in white. Storage is handled by a 1TB Samsung 980 Pro NVMe SSD for lightning-fast speeds.
                 </p>
               </div>
             </div>
-            <h3>Setup Likes:<span id="like">0</span></h3>
+            <h3>Setup Likes: <span id="like">0</span></h3>
 
-            <!--Edit and Delete are only for creator-->
+            <!-- Edit and Delete are only for creator -->
             <div id="action-buttons">
               <a href="#" id="edit-btn">Edit</a>
               <a href="#" id="delete-btn">Delete</a>
 
-              <!--Bonus - Only for logged-in users ( not authors )-->
+              <!-- Bonus - Only for logged-in users (not authors) -->
               <a href="#" id="like-btn">Like</a>
             </div>
           </div>
