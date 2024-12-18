@@ -38,7 +38,6 @@ async function request(method, url, data) {
         
     } catch (err) {
 
-        //TODO use the different types of error report by the exam description!
         alert(err.message);
         throw err;
     }
